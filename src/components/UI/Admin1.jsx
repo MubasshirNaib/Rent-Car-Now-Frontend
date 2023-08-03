@@ -8,7 +8,7 @@ const Admin1 = () => {
     const [data, setData] = useState([]);
     let [cars, setCars] = useState([]);
    useEffect(() => {
-    axios.get('http://localhost:8001/cars')
+    axios.get('https://rent-car-now-backend.vercel.app/cars')
     // .then(carrrs => setCars(carrrs.data))
     .then(res => {
         setData(res.data)
@@ -17,7 +17,7 @@ const Admin1 = () => {
     .catch(err => console.log(err));
    },[])
    const handleDelete = (id) => {
-      axios.delete('http://localhost:8001/deletecar/'+ id)
+      axios.delete('https://rent-car-now-backend.vercel.app/deletecar/'+ id)
       .then(res => {console.log(res)
        window.location.reload()})
       .catch(errr => console.log(errr))

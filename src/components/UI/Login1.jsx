@@ -20,7 +20,7 @@ const Login1 = () => {
         e.preventDefault();
         try {
             await axios
-                .post('http://localhost:8001/login', {
+                .post('https://rent-car-now-backend.vercel.app/login', {
                     email: email,
                     password: password
                 })
@@ -43,7 +43,7 @@ const Login1 = () => {
     async function asubmit(e){
         e.preventDefault();
         try {
-          await axios.post("http://localhost:8001/admin",
+          await axios.post("https://rent-car-now-backend.vercel.app/admin",
           {
             email,password
           })

@@ -21,7 +21,7 @@ const About = () => {
     console.log(users);
     useEffect(() => {
         axios
-            .get('http://localhost:8001/users')
+            .get('https://rent-car-now-backend.vercel.app/users')
             .then((users) => setUsers(users.data))
             .catch((err) => console.log('error has occured from app.js file'));
     }, []);

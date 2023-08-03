@@ -26,7 +26,7 @@ const BookingForm = (props) => {
 
         try {
             await axios
-                .post('http://localhost:8001/cars', {
+                .post('https://rent-car-now-backend.vercel.app/cars', {
                     name,
                     email,
                     phoneNumber,

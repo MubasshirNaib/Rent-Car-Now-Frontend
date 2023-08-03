@@ -19,7 +19,7 @@ const Register1 = () => {
         e.preventDefault();
         try {
             await axios
-                .post('http://localhost:8001/register', { name, email, phone, password })
+                .post('https://rent-car-now-backend.vercel.app/register', { name, email, phone, password })
                 .then((res) => {
                     if (res.data === 'exist') {
                         alert('User already exists');
